@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--<item name="colorAccent">@color/colorAccent</item>
+        <item name="android:spinnerItemStyle">@style/spinnerStyle</item>
+        <item name="android:spinnerDropDownItemStyle">@style/spinnerDropDown</item>-->
+    </style>
+
+    <style name="numbers">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:background">@drawable/numberstates</item>
+    </style>
+
+    <style name="options">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:background">@drawable/optionstates</item>
+    </style>
+
+    <style name="quit">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@drawable/quitstates</item>
+    </style>
+
+    <style name="text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@drawable/textbackground</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="spinnerStyle">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="spinnerDropDown">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+
+</resources>

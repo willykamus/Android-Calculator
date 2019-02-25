@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AndroidProjectN1</string>
+    <string-array name="difficulties">
+
+        <item>Easy</item>
+        <item>Normal</item>
+        <item>Hard</item>
+
+    </string-array>
+
+    <integer name="criticalTime">3</integer>
+    <integer name="easy">20000</integer>
+    <integer name="normal">10000</integer>
+    <integer name="hard">5000</integer>
+</resources>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView_TimerTitle"
+        style="@style/text"
+        android:text="Counter"
+        android:gravity="bottom|center"
+        app:layout_constraintBottom_toTopOf="@+id/textView_Timer"
+        app:layout_constraintEnd_toEndOf="@id/button7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_Timer"
+        style="@style/text"
+        android:text="TextView"
+        android:gravity="center|top"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/textView_TimerTitle"
+        app:layout_constraintStart_toStartOf="@id/textView_TimerTitle"
+        app:layout_constraintEnd_toEndOf="@id/button7"/>
+
+    <Button
+        android:id="@+id/button7"
+        style="@style/numbers"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Timer"
+        app:layout_constraintStart_toStartOf="@id/textView_TimerTitle"
+        app:layout_constraintEnd_toStartOf="@id/button8"/>
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/numbers"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/button7"
+        app:layout_constraintStart_toStartOf="@id/textView_TimerTitle"
+        app:layout_constraintEnd_toStartOf="@id/button5"/>
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/numbers"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/button0"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintStart_toStartOf="@id/textView_TimerTitle"
+        app:layout_constraintEnd_toStartOf="@id/button2"/>
+
+    <Button
+        android:id="@+id/button0"
+        style="@style/numbers"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/button_Quit"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintStart_toStartOf="@id/textView_TimerTitle"
+        app:layout_constraintEnd_toStartOf="@id/button_Dot"/>
+
+    <Button
+        android:id="@+id/button_Quit"
+        style="@style/quit"
+        android:text="Quit"
+        app:layout_constraintTop_toBottomOf="@+id/button0"
+        app:layout_constraintStart_toStartOf="@id/textView_TimerTitle"
+        app:layout_constraintEnd_toStartOf="@id/button_Clear"
+        app:layout_constraintBottom_toBottomOf="@id/spinner_Dificulty"/>
+
+    <TextView
+        android:id="@+id/textView_Question"
+        style="@style/text"
+        android:text="TextView"
+        android:textSize="30dp"
+        android:gravity="center_vertical|end"
+        app:layout_constraintTop_toBottomOf="@id/editText_UserAnswer"
+        app:layout_constraintBottom_toBottomOf="@id/textView_Timer"
+        app:layout_constraintStart_toEndOf="@id/textView_TimerTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_UserAnswer"
+        style="@style/text"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:gravity="center_vertical|end"
+        android:text="Name"
+        android:textSize="30dp"
+        app:layout_constraintStart_toEndOf="@id/textView_TimerTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textView_Timer"/>
+
+    <Button
+        android:id="@+id/button8"
+        style="@style/numbers"
+        android:text="8"
+        app:layout_constraintStart_toEndOf="@id/button7"
+        app:layout_constraintTop_toTopOf="@id/button7"
+        app:layout_constraintEnd_toStartOf="@id/button9"
+        app:layout_constraintBottom_toBottomOf="@id/button7"/>
+
+    <Button
+        android:id="@+id/button9"
+        style="@style/numbers"
+        android:text="9"
+        app:layout_constraintTop_toTopOf="@id/button7"
+        app:layout_constraintStart_toEndOf="@id/button8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/button7"
+         />
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/numbers"
+        android:text="5"
+        app:layout_constraintTop_toTopOf="@id/button4"
+        app:layout_constraintStart_toEndOf="@id/button4"
+        app:layout_constraintEnd_toStartOf="@id/button6"
+        app:layout_constraintBottom_toBottomOf="@id/button4"/>
+
+    <Button
+        android:id="@+id/button6"
+        style="@style/numbers"
+        android:text="6"
+        app:layout_constraintTop_toTopOf="@id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button5"
+        app:layout_constraintBottom_toBottomOf="@id/button4"/>
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/numbers"
+        android:text="2"
+        app:layout_constraintTop_toTopOf="@id/button1"
+        app:layout_constraintStart_toEndOf="@id/button1"
+        app:layout_constraintEnd_toStartOf="@id/button3"
+        app:layout_constraintBottom_toBottomOf="@id/button1"/>
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/numbers"
+        android:text="3"
+        app:layout_constraintTop_toTopOf="@id/button1"
+        app:layout_constraintStart_toEndOf="@id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/button1"
+         />
+
+    <Button
+        android:id="@+id/button_Dot"
+        style="@style/numbers"
+        android:text="."
+        app:layout_constraintTop_toTopOf="@id/button0"
+        app:layout_constraintStart_toEndOf="@id/button0"
+        app:layout_constraintEnd_toStartOf="@id/button_Negative"
+        app:layout_constraintBottom_toBottomOf="@id/button0"/>
+
+    <Button
+        android:id="@+id/button_Negative"
+        style="@style/numbers"
+        android:text="-"
+        app:layout_constraintTop_toTopOf="@id/button0"
+        app:layout_constraintStart_toEndOf="@id/button_Dot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/button0"
+         />
+
+    <Button
+        android:id="@+id/button_Clear"
+        style="@style/options"
+        android:text="Clear"
+        app:layout_constraintTop_toTopOf="@id/button_Quit"
+        app:layout_constraintStart_toEndOf="@id/button_Quit"
+        app:layout_constraintEnd_toStartOf="@id/button_Generate"
+        app:layout_constraintBottom_toBottomOf="@id/button_Quit"
+         />
+
+    <Button
+        android:id="@+id/button_Generate"
+        style="@style/options"
+        android:text="Generate"
+        app:layout_constraintTop_toTopOf="@id/button_Quit"
+        app:layout_constraintStart_toEndOf="@id/button_Clear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/button_Quit"
+         />
+
+    <Button
+        android:id="@+id/button_Save"
+        style="@style/options"
+        android:text="="
+        app:layout_constraintTop_toTopOf="@id/spinner_Dificulty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/spinner_Dificulty"
+        app:layout_constraintEnd_toEndOf="@id/button_Display"
+         />
+
+    <Button
+        android:id="@+id/button_Display"
+        style="@style/options"
+        android:text="Show all"
+        app:layout_constraintTop_toTopOf="@id/spinner_Dificulty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="504dp" />
+
+    <Spinner
+        android:id="@+id/spinner_Dificulty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/orangeborder"
+        style="@style/spinnerDropDown"
+        app:layout_constraintTop_toBottomOf="@id/button_Quit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_Save"
+         />
+</android.support.constraint.ConstraintLayout>
