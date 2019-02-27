@@ -82,7 +82,8 @@
         app:layout_constraintTop_toBottomOf="@id/editText_UserAnswer"
         app:layout_constraintBottom_toBottomOf="@id/textView_Timer"
         app:layout_constraintStart_toEndOf="@id/textView_TimerTitle"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingEnd="10dp"/>
 
     <EditText
         android:id="@+id/editText_UserAnswer"
@@ -95,7 +96,8 @@
         app:layout_constraintStart_toEndOf="@id/textView_TimerTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/textView_Timer"/>
+        app:layout_constraintBottom_toTopOf="@id/textView_Timer"
+        android:paddingEnd="18dp"/>
 
     <Button
         android:id="@+id/button8"

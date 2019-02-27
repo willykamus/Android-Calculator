@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidProjectN1</string>
+    <string name="app_name">Math Trivia</string>
     <string-array name="difficulties">
 
         <item>Easy</item>

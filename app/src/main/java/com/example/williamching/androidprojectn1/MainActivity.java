@@ -108,11 +108,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
 
             case R.id.button_Negative:
-                if(!editTextAnswer.getText().toString().equals("")){
-                    String str = "-"+editTextAnswer.getText().toString();
-                    editTextAnswer.setText(str);
-                }else{
-                    editTextAnswer.setText("-");
+                if(!editTextAnswer.getText().toString().contains("-")) {
+                    if (!editTextAnswer.getText().toString().equals("")) {
+                        String str = "-" + editTextAnswer.getText().toString();
+                        editTextAnswer.setText(str);
+                    } else {
+                        editTextAnswer.setText("-");
+                    }
                 }
                 break;
 
@@ -151,20 +153,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.button_Save:
 
-                try {
-                    if(timeLeft==0){
-                        Question.UserAnswer answer = question.new UserAnswer(0);
-                    } else {
-                        Question.UserAnswer answer = question.new UserAnswer(Integer.valueOf(editTextAnswer.getText().toString()));
-                        question.setAnswer(answer);
-                        resetTimer();
-                    }
+                if(textViewQuestion.getText().toString().equals("")){
+                    Toast.makeText(this,"Please generate a question",Toast.LENGTH_LONG).show();
+                } else if (timeLeft == 0) {
+                    Toast.makeText(this, "Time is up", Toast.LENGTH_LONG).show();
+                } else if (editTextAnswer.getText().toString().equals("")){
+                    Toast.makeText(this, "Please insert an answer", Toast.LENGTH_LONG).show();
+                } else {
+                    Question.UserAnswer answer = question.new UserAnswer(Integer.valueOf(editTextAnswer.getText().toString()));
+                    question.setAnswer(answer);
                     listQuestions.add(question);
-                } catch (NumberFormatException e) {
-                    Toast.makeText(this,"Please insert a answer first",Toast.LENGTH_LONG).show();
+                    resetTimer();
                 }
-
-
                 break;
         }
 
@@ -248,6 +248,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             listNumberedButton.get(i).setEnabled(bool);
         }
         spinner.setEnabled(!bool);
+        buttonDot.setEnabled(bool);
+        buttonNegative.setEnabled(bool);
         buttonSave.setEnabled(bool);
         if(bool) {
             buttonSave.setBackgroundResource(R.drawable.optionbackground);

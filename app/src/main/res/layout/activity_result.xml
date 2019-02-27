@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/darkbackground"
     tools:context=".ResultActivity">
 
     <TextView
@@ -13,15 +14,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:text=""
-        android:textSize="15dp"/>
+        android:textColor="@android:color/white"
+        android:textSize="17dp"/>
 
     <TextView
         android:id="@+id/textView_FinalResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/textView_Questions"
+        android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
         android:text="TextView" />
+
+    <ImageButton
+        android:id="@+id/button_Back"
+        android:scaleType="fitCenter"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/back_arrow"
+        />
+
+    <ImageView
+        android:id="@+id/imageView_Face"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/nerd_face"
+        app:layout_constraintTop_toBottomOf="@id/textView_FinalResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+         />
 
 </android.support.constraint.ConstraintLayout>
